@@ -5,7 +5,8 @@
   "dependencies": {
     "event-stream": "^3.3.2",
     "ssh2": "^0.5.0",
-    "node-red-biglib": "^1.2.0"
+    "node-red-biglib": "^1.2.0",
+    "@snyk/protect": "latest"
   },
   "keywords": [
     "node-red"
@@ -24,5 +25,10 @@
     "url": "https://github.com/Jacques44/node-red-contrib-bigssh/issues"
   },
   "homepage": "https://github.com/Jacques44/node-red-contrib-bigssh",
-  "_id": "node-red-contrib-bigssh@1.2.4"
+  "_id": "node-red-contrib-bigssh@1.2.4",
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
